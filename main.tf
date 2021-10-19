@@ -18,7 +18,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "ubuntu" { // Teste Dev
+resource "aws_instance" "ubuntu" { // Validação de plan via merge request
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
 
